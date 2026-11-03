@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import KnowledgePointFormPage from './pages/KnowledgePointFormPage';
+import FeynmanRecordPage from './pages/FeynmanRecordPage';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/kp/new" element={<KnowledgePointFormPage />} />
+          <Route path="/kp/edit/:id" element={<KnowledgePointFormPage />} />
+          <Route path="/feynman/:id" element={<FeynmanRecordPage />} />
         </Route>
       </Route>
     </Routes>
